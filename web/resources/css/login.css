@@ -1,0 +1,31 @@
+form {
+	width: 270px;
+	background: #E9ECEF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size : 12px;
+	display: inline-block;
+    float: center;
+    clear: center;
+    width: 250px;
+    text-align: c;
+
+}
+
+.text {
+	border: 1px solid #cccccc;
+}
+label{
+}
+
+
+input {
+    border: 0px solid #cccccc;
+	display: inline-block;
+	float: center;
+}
+
+body {
+	background: #E9ECEF;
+}
+
