@@ -1,6 +1,13 @@
 <?php
+
+// include essential files
+
 include 'utils/common.php';
-checkUser();
+
+// check if user is logged in
+
+checkUser(); 
+
 ?>
 
 <html oncontextmenu="return false">
@@ -93,7 +100,7 @@ function toggleOverlay(){
 		Deze tekst dient <b>begrijpend</b> gelezen te worden (er worden vragen na de tekst gesteld!)<br>
 		Druk tijdens het lezen van de tekst op <b>GEEN</b> toetsen!! Gebruik het <b>scroll-wiel</b> om naar beneden te scrollen.<br>
 		<br>
-		Als je klaar bent met het lezen van de tekst, druk dan op <b>SPATIEBAR</b>, dan wordt je doorgestuurd naar de vragenlijst.<br>
+		Als je klaar bent met het lezen van de tekst, druk dan op de <b>ENTER</b> toets, dan wordt je doorgestuurd naar de vragenlijst.<br>
 		<br>
 		Als je enige vragen hebt, steek dan je vinger op en dan komen we naar je toe.<br>
 		<br>
@@ -113,4 +120,7 @@ div {
     text-align: center; /* IE */
 }
 </style>
+
+<input type="hidden" name="Mode" id="Mode" value="TimeText1">
+
 </html>

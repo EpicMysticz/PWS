@@ -1,18 +1,11 @@
-<html>
-<body>
-
-<table border="1" width="40%">
-<tr>
-	<th>Login</th>
-	<th>Wachtwoord</th>
-	<th>T1</th>
-	<th>T2</th>
-</tr>
-
 <?
+// ----------------------
+// Account printer script
+// ----------------------
 
-// print all accounts
-printAccounts();
+
+// include essential files
+include 'db_connect.php';
 
 // function to print all accounts.
 function printAccounts()
@@ -39,7 +32,22 @@ function printAccounts()
 		
 	mysqli_close($con);
 }
+?>
 
+<html>
+<body>
+
+<table border="1" width="40%">
+<tr>
+	<th>Login</th>
+	<th>Wachtwoord</th>
+	<th>T1</th>
+	<th>T2</th>
+</tr>
+
+<?
+// print all accounts
+printAccounts();
 ?>
 
 </body>

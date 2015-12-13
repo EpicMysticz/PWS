@@ -1,4 +1,5 @@
 <?php
+// include essential files
 require_once('utils/common.php');
 
 $error = '0';
@@ -12,33 +13,36 @@ if (isset($_POST['submitBtn'])){
 	$error = loginUser($username,$password);
 }
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
 <html oncontextmenu="return false">
-<head>
-   <title>Portal</title>
-   <link href="resources/css/login.css" rel="stylesheet" type="text/css" />
-   <style>
-   background: #E9ECEF;
-   </style>	
-</head>
+	<head>
+	   <title>Portal</title>
+	   <link href="resources/css/login.css" rel="stylesheet" type="text/css" />
+	   <style>
+	   background: #E9ECEF;
+	   </style>	
+	</head>
 <center>
-<body id="main">
-<h1>Login Portaal</h1>
-<?php if ($error != '') {?>
-      <form action="login.php" autocomplete="off" method="post" name="loginform">
-        <table width="100%" allign="center">
-          <tr><td>Username:</td><td> <input class="text" name="username" type="text"  /></td></tr>
-          <tr><td>Password:</td><td> <input class="text" name="password" type="password" /></td></tr>
-          <tr><td colspan="2"> <input class="text" type="submit" name="submitBtn" value="Login" /><?php if (isset($_POST['submitBtn'])){ 
-	if ($error != ''){
-		echo ' ' .$error. ' '; 
-	}else{
-		//do nothing
-	}
-}?></td></tr>
-        </table>  
-      </form>
-</body>   
+	<body id="main">
+	<h1>Login Portaal</h1>
+	<?php if ($error != '') {?>
+		  <form action="login.php" autocomplete="off" method="post" name="loginform">
+			<table width="100%" allign="center">
+			  <tr><td>Username:</td><td> <input class="text" name="username" type="text"  /></td></tr>
+			  <tr><td>Password:</td><td> <input class="text" name="password" type="password" /></td></tr>
+			  <tr><td colspan="2"> <input class="text" type="submit" name="submitBtn" value="Login" /><?php if (isset($_POST['submitBtn'])){ 
+		if ($error != ''){
+			echo ' ' .$error. ' '; 
+		}else{
+			//do nothing
+		}
+	}?></td></tr>
+			</table>  
+		  </form>
+	</body>
+</html>
+
 <?php
 }
 if (isset($_POST['submitBtn'])){
@@ -68,6 +72,7 @@ if (isset($_POST['submitBtn'])){
 				<option value="18">18</option>
 				<option value="18">19</option>
 			</select>
+				<input type="hidden" name="Mode" id="Mode" value="studentDetails">
 				<br><br><input type="submit" value="Verdergaan">
 			</form>');
 		//debug infos

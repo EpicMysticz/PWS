@@ -1,7 +1,4 @@
-<?php
-include 'utils/common.php';
-checkUser();
-?>
+<?php// include essential filesinclude 'utils/common.php';// check if user is logged incheckUser(); ?>
 <html oncontextmenu="return false">
 <head>
 	<title>Info</title>
